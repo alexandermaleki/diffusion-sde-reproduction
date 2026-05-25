@@ -1,0 +1,7 @@
+Memorization nearest-neighbor report
+====================================
+Number of generated samples: 64
+Mean nearest-neighbor MSE: 0.08956958
+Median nearest-neighbor MSE: 0.08446103
+Minimum nearest-neighbor MSE: 0.01753299
+Maximum nearest-neighbor MSE: 0.22495018

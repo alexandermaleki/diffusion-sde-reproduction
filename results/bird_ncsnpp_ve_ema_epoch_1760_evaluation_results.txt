@@ -1,0 +1,8 @@
+model_name: bird_ncsnpp_ve_ema_epoch_1760
+fid: 59.065773010253906
+num_steps: 1000
+corrector_steps: 1
+mem_mean_nn_mse: 0.0895695760846138
+mem_median_nn_mse: 0.08397173136472702
+mem_min_nn_mse: 0.017532994970679283
+mem_max_nn_mse: 0.2249501794576645

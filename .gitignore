@@ -1,0 +1,24 @@
+
+model_checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+data/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
+
+# Colab/runtime scratch files
+.config/
+content/
+sample_grids/
+generated_samples/
+colab_tmp/
+tmp/
+*.tmp
+*.npy
+*.npz
+*.pkl
+wandb/
