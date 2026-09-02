@@ -1,14 +1,18 @@
-# Score-Based Diffusion Models: A Compute-Constrained Reproduction
+# Reproducing Score-Based Diffusion Models
 
-![EMA-generated Oxford Flowers samples](assets/oxford-flowers-ema-samples.png)
+<p align="center">
+  <img src="assets/oxford-flowers-ema-samples.png" alt="EMA-generated Oxford Flowers samples" width="700">
+</p>
 
-Song et al.'s *Score-Based Generative Modeling through Stochastic Differential
-Equations* trains on full datasets, large models, and thousands of sampling
-steps. We had a fraction of that budget. Rather than chase state-of-the-art
-numbers, we treated the constraint as the actual experiment: how much of the
-framework's behavior survives when almost everything is shrunk down?
+The original paper, Song et al.'s *Score-Based Generative Modeling through
+Stochastic Differential Equations*, trains on large-scale datasets,
+high-capacity models, and thousands of sampling steps. Our setup was
+considerably more constrained. Rather than aim to match their results
+directly, we treated that constraint as the basis for a different question:
+how much of the framework's behavior holds up under a substantially reduced
+budget?
 
-**Full report:** [`report/report.pdf`](./report/report.pdf)
+The full report is [here](./report/report.pdf).
 
 ## The setup
 
@@ -47,7 +51,9 @@ generated samples sit closer, on average, to what the model trained on:
 
 ## Quality vs. Memorization Trade-off
 
-![Generated samples vs. nearest training/test neighbors](assets/generated-vs-nearest-neighbors.png)
+<p align="center">
+  <img src="assets/generated-vs-nearest-neighbors.png" alt="Generated samples vs. nearest training/test neighbors" width="700">
+</p>
 
 EMA weights improved FID in every single case where both raw and EMA were
 evaluated. Taken alone, that would suggest just always use EMA and move on -
@@ -71,7 +77,9 @@ practical trade-off we found was the augmented VE-SDE NCSN++ with EMA: FID
 
 ## Corrector-Step Ablation
 
-![FID and samples across 0-4 Langevin corrector steps](assets/corrector-step-ablation.png)
+<p align="center">
+  <img src="assets/corrector-step-ablation.png" alt="FID and samples across 0-4 Langevin corrector steps" width="700">
+</p>
 
 Standard sampling here used 1,000 Euler-Maruyama predictor steps. We also
 tried adding 1-4 Langevin corrector steps on top, to see if it would sharpen
